@@ -4,11 +4,11 @@ metadata:
   name: site1pool1bridge1
   namespace: tableau
   labels:
-    app.kubernetes.io/name: site1pool1bridge1
+    app: site1pool1bridge1
 spec:
   clusterIP: None
   selector:
-    app.kubernetes.io/name: site1pool1bridge1
+    app: site1pool1bridge1
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -20,11 +20,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: site1pool1bridge1
+      app: site1pool1bridge1
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: site1pool1bridge1
+        app: site1pool1bridge1
     spec:
       containers:
         - env:
