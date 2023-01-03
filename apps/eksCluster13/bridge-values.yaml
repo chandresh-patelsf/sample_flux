@@ -1,11 +1,13 @@
 apiVersion: apps/v1
 kind: StatefulSet
+metadata:
+  name: not-used
 spec:
   serviceName: "site1pool1bridge1"
   replicas: 1
   selector:
     matchLabels:
-      app: site1pool1bridge1
+      app.kubernetes.io/name: site1pool1bridge1
   template:
     spec:
       containers:
