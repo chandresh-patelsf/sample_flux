@@ -24,7 +24,7 @@ spec:
   template:
     metadata:
       labels:
-        app: site1pool1bridge1
+        app.kubernetes.io/name: site1pool1bridge1
     spec:
       containers:
         - env:
