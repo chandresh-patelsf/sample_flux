@@ -1,7 +1,11 @@
 apiVersion: apps/v1
 kind: StatefulSet
 spec:
+  serviceName: "site1pool1bridge1"
   replicas: 1
+  selector:
+    matchLabels:
+      app: site1pool1bridge1
   template:
     spec:
       containers:
