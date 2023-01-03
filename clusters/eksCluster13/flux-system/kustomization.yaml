@@ -10,7 +10,7 @@ patches:
     patch: |
       - op: replace
         path: /spec/template/spec/containers/0/resources/limits/cpu
-        value: 250m
+        value: 1000m
       - op: replace
         path: /spec/template/spec/containers/0/resources/limits/memory
-        value: 512M
+        value: 4096M
