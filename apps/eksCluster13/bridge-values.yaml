@@ -1,13 +1,1 @@
 replicas: 1
-template:
-  spec:
-    containers:
-      - env:
-        - name: SITE
-          value: "chandreshsandbox4"
-        - name: USEREMAIL
-          value: "chandresh.patel@tableau.com"
-        - name: SERVERPOD
-          value: "https://prod-useast-a.online.tableau.com/"
-        name: site1pool1bridge1
-        image: 010465704656.dkr.ecr.us-west-2.amazonaws.com/tableau_bridge:near.22.1117.1328-1
