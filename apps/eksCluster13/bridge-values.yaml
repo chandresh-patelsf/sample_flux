@@ -7,7 +7,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: site1pool1bridge1
+      app: site1pool1bridge1
   template:
     spec:
       containers:
