@@ -24,9 +24,9 @@ spec:
     matchLabels:
       app: site1pool1bridge1
   template:
- #   metadata:
- #     labels:
- #       app: site1pool1bridge1
+    metadata:
+      labels:
+        app: site1pool1bridge1
     spec:
       containers:
         - env:
