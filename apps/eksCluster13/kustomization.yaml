@@ -6,4 +6,4 @@ patches:
   - path: bridge-values.yaml
     target:
       kind: StatefulSet
-      labelSelector: app=site1pool1bridge1_fixme
+      labelSelector: app=site1pool1bridge1
