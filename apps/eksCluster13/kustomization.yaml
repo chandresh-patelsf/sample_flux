@@ -3,11 +3,7 @@ kind: Kustomization
 resources:
   - ../base/bridge
 patches:
-  - path: nginx-values.yaml
-    target:
-      kind: Deployment
-      labelSelector: app.kubernetes.io/name=nginx
   - path: bridge-values.yaml
     target:
       kind: StatefulSet
-      labelSelector: app.kubernetes.io/name=site1pool1bridge1
+      labelSelector: app=site1pool1bridge1

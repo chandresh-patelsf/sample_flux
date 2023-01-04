@@ -15,27 +15,29 @@ kind: StatefulSet
 metadata:
   name: site1pool1bridge1
   namespace: tableau
+  labels:
+    app: site1pool1bridge1
 spec:
   serviceName: "site1pool1bridge1"
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: site1pool1bridge1
+      app: site1pool1bridge1
   template:
-    metadata:
-      labels:
-        app.kubernetes.io/name: site1pool1bridge1
+ #   metadata:
+ #     labels:
+ #       app: site1pool1bridge1
     spec:
       containers:
         - env:
-          - name: SITE
-            value: "chandreshsandbox4"
-          - name: USEREMAIL
-            value: "chandresh.patel@tableau.com"
-          - name: SERVERPOD
-            value: "https://prod-useast-a.online.tableau.com/"
+            - name: SITE
+              value: "changeme"
+            - name: USEREMAIL
+              value: "changeme"
+            - name: SERVERPOD
+              value: "changeme"
+          image: changeme
           name: site1pool1bridge1
-          image: 010465704656.dkr.ecr.us-west-2.amazonaws.com/tableau_bridge:near.22.1117.1328-1
           volumeMounts:
             - name: secret
               mountPath: "/etc/secret"
