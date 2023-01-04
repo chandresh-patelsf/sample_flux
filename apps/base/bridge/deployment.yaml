@@ -20,6 +20,8 @@ metadata:
 spec:
   serviceName: "site1pool1bridge1"
   replicas: 1
+  updateStrategy:
+    type: RollingUpdate
   selector:
     matchLabels:
       app: site1pool1bridge1
