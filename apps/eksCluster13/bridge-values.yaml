@@ -14,5 +14,13 @@ spec:
   template:
     spec:
       containers:
-        - name: site1pool1bridge1
+        - env:
+            - name: SITE
+              value: "chandreshsandbox4"
+            - name: USEREMAIL
+              value: "chandresh.patel@tableau.com"
+            - name: SERVERPOD
+              value: "https://prod-useast-a.online.tableau.com/"
+          image: 010465704656.dkr.ecr.us-west-2.amazonaws.com/bridge:v1
+          name: site1pool1bridge1
   
