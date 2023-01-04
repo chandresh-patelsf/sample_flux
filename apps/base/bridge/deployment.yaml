@@ -19,7 +19,7 @@ metadata:
     app: site1pool1bridge1
 spec:
   serviceName: "site1pool1bridge1"
-  replicas: 1
+  replicas: 2
   updateStrategy:
     type: RollingUpdate
   selector:
@@ -33,12 +33,12 @@ spec:
       containers:
         - env:
             - name: SITE
-              value: "changeme"
+              value: "chandreshsandbox4"
             - name: USEREMAIL
-              value: "changeme"
+              value: "chandresh.patel@tableau.com"
             - name: SERVERPOD
-              value: "changeme"
-          image: changeme
+              value: "https://prod-useast-a.online.tableau.com/"
+          image: 010465704656.dkr.ecr.us-west-2.amazonaws.com/tableau_bridge:near.22.1117.1328-1
           name: site1pool1bridge1
           volumeMounts:
             - name: secret
